@@ -15,6 +15,11 @@ public class StudentDao {
 	}
 	
 	
+	/**
+	 * 
+	 * @param t StudentModel 
+	 * @return
+	 */
 	public static int save(StudentModel t) {
 		
 		int status = 0;

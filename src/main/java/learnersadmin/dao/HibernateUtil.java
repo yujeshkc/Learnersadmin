@@ -13,12 +13,15 @@ import learnersadmin.model.TeacherModel;
 import learnersadmin.model.ClassesModel;
 import learnersadmin.model.SubjectModel;
 import learnersadmin.model.StudentModel;
-import learnersadmin.model.UserModel;
 
 
 public class HibernateUtil {
 	 private static SessionFactory sessionFactory;
 
+	 /**
+	  * 
+	  * @return
+	  */
 	 public static SessionFactory getSessionFactory() {
 	  if (sessionFactory == null) {
 	   try {
@@ -43,7 +46,6 @@ public class HibernateUtil {
 	    configuration.addAnnotatedClass(ClassesModel.class);
 	    configuration.addAnnotatedClass(SubjectModel.class);
 	    configuration.addAnnotatedClass(StudentModel.class);
-	    configuration.addAnnotatedClass(UserModel.class);
 
 	    ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 	      .applySettings(configuration.getProperties()).build();

@@ -1,8 +1,6 @@
 package learnersadmin.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,9 +16,6 @@ import learnersadmin.dao.LoginDao;
  * Servlet implementation class LoginController
  */
 
-/**
- * Servlet implementation class ClassesController
- */
 @WebServlet(urlPatterns = {"/login","/logout","/logincheck"})
 
 public class LoginController extends HttpServlet {

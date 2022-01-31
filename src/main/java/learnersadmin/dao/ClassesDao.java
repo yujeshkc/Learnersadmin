@@ -18,6 +18,11 @@ public class ClassesDao {
 	}
 	
 	
+	/**
+	 * 
+	 * @param t ClassesModel hibernate pojo entity class
+	 * @return Return 1 if update is sucess or 2 for error.
+	 */
 	public static int save(ClassesModel t) {
 		
 		int status = 0;		
@@ -40,6 +45,11 @@ public class ClassesDao {
 		return status;
 	}
 	
+	/**
+	 * Update class row 
+	 * @param t ClassesModel hibernate pojo entity class
+	 * @return Return 1 if update is sucess or 2 for error.
+	 */
 	public static int update(ClassesModel t) {
 			
 			int status = 0;
@@ -58,13 +68,17 @@ public class ClassesDao {
 			} catch (Exception ex) {
 				status = 2;
 				ex.printStackTrace();
-			}
-			
+			}			
 			
 			return status;
 		}
 
-    public static ClassesModel getClasses(int id) {
+    /**
+     * Get single class data to from id
+     * @param id class id from Mysql
+     * @return Classes row from Mysql
+     */
+	public static ClassesModel getClasses(int id) {
 
         Transaction transaction = null;
         ClassesModel classes = null;
@@ -113,7 +127,7 @@ public class ClassesDao {
     }
     
     /**
-     * Delete User
+     * Delete Class
      * @param id
      */
     public void deleteClasses(int id) {
