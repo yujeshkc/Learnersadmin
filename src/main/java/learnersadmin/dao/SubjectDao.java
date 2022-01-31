@@ -107,8 +107,7 @@ public class SubjectDao {
             e.printStackTrace();
         }
         
-        return listOfSubjects;
-        
+        return listOfSubjects;       
         
     }
     
