@@ -47,8 +47,7 @@ public class LoginController extends HttpServlet {
 				
 					RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");	        
 			        dispatcher.forward(request, response);
-				}
-			
+				}			
 			break;
 			case "/logincheck":
 				String user = request.getParameter("username");

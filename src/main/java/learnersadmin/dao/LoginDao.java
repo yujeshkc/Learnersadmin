@@ -32,9 +32,8 @@ public class LoginDao {
 	        status = 0;
 	      } else {
 	    	status = 1;
-	    }
-	    
-		System.out.println("0. Status LoginDao: " + status);
+	    }    
+		
 		return status;
 	}
 	

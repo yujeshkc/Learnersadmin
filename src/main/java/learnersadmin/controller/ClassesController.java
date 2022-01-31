@@ -84,17 +84,17 @@ public class ClassesController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-			// TODO Auto-generated method stub
-			doGet(request, response);
-		
+
+		// TODO Auto-generated method stub
+		doGet(request, response);
+
 	}
 
 	/**
 	 * Display from from class
 	 * 
-	 * @param request servlet request
-	 * @param response 
+	 * @param request  servlet request
+	 * @param response
 	 * @throws ServletException
 	 * @throws IOException
 	 */
