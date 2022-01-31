@@ -89,11 +89,12 @@ public class ClassesController extends HttpServlet {
 			doGet(request, response);
 		}
 	}
-	
+
 	/**
 	 * Display from from class
-	 * @param request
-	 * @param response
+	 * 
+	 * @param request servlet request
+	 * @param response 
 	 * @throws ServletException
 	 * @throws IOException
 	 */
@@ -105,9 +106,9 @@ public class ClassesController extends HttpServlet {
 		dispatcher.forward(request, response);
 	}
 
-	
 	/**
 	 * Save new entry for class
+	 * 
 	 * @param request
 	 * @param response
 	 * @throws ServletException
