@@ -1,6 +1,6 @@
 package learnersadmin.model;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,11 +27,11 @@ public class SubjectModel {
     private String subjectTime;
 
 	@ManyToOne(targetEntity = ClassesModel.class)
-    @JoinColumn(name = "class_id", referencedColumnName = "id")
+    @JoinColumn(name = "class_id", referencedColumnName = "id", updatable = false, nullable = false)
     private ClassesModel classes;
 	
 	@ManyToOne(targetEntity = TeacherModel.class)
-    @JoinColumn(name = "teacher_id", referencedColumnName = "id")
+    @JoinColumn(name = "teacher_id", referencedColumnName = "id", updatable = false, nullable = false)
     private TeacherModel teacher;
 	
 	

@@ -1,22 +1,13 @@
 package learnersadmin.model;
 
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
-
-//import java.util.Set;
-
-//import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-//import javax.persistence.JoinColumn;
-//import javax.persistence.OneToMany;
+
+
 import javax.persistence.Table;
 
 
@@ -37,15 +28,14 @@ public class ClassesModel {
 	@Column(nullable=false, name="shift")
 	private String classShift;
 	
-	//private Set<StudentModel> student;
 	
-	@OneToMany(targetEntity = StudentModel.class, cascade = CascadeType.ALL)
-	@JoinColumn(name = "class_id", referencedColumnName = "id")
-    private List<StudentModel> student;
-	
-	@OneToMany(targetEntity = SubjectModel.class, cascade = CascadeType.ALL)
-	@JoinColumn(name = "class_id", referencedColumnName = "id")
-    private List<StudentModel> subject;
+//	@OneToMany(targetEntity = StudentModel.class, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "class_id", referencedColumnName = "id")
+//    private List<StudentModel> student;
+//	
+//	@OneToMany(targetEntity = SubjectModel.class, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "class_id", referencedColumnName = "id")
+//    private List<SubjectModel> subject;
 	
 	
 	public ClassesModel() {
@@ -115,24 +105,5 @@ public class ClassesModel {
 		this.classShift = classShift;
 	}
 
-	public List<StudentModel> getStudent() {
-		return student;
-	}
-
-	public void setStudent(List<StudentModel> student) {
-		this.student = student;
-	}
-
-	public List<StudentModel> getSubject() {
-		return subject;
-	}
-
-	public void setSubject(List<StudentModel> subject) {
-		this.subject = subject;
-	}
-	
-
-	
-	
 	
 }
