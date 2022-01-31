@@ -33,7 +33,7 @@
               <!-- Page title actions -->
               <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">          
-                  <a href="/learnersadmin/subject/create?class_id=${class_id}" class="btn btn-primary d-none d-sm-inline-block">                 
+                  <a href="/learnersadmin/subject/create?class_id=${classes.id}" class="btn btn-primary d-none d-sm-inline-block">                 
                     Add new Subject
                   </a>
                    

@@ -43,6 +43,10 @@ public class ClassesModel {
 	@JoinColumn(name = "class_id", referencedColumnName = "id")
     private List<StudentModel> student;
 	
+	@OneToMany(targetEntity = SubjectModel.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "class_id", referencedColumnName = "id")
+    private List<StudentModel> subject;
+	
 	
 	public ClassesModel() {
 		super();
@@ -117,6 +121,14 @@ public class ClassesModel {
 
 	public void setStudent(List<StudentModel> student) {
 		this.student = student;
+	}
+
+	public List<StudentModel> getSubject() {
+		return subject;
+	}
+
+	public void setSubject(List<StudentModel> subject) {
+		this.subject = subject;
 	}
 	
 

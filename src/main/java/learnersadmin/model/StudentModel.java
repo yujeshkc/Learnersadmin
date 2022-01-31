@@ -1,6 +1,7 @@
 package learnersadmin.model;
 
 
+import javax.persistence.CascadeType;
 //import java.util.LinkedHashMap;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,7 +33,7 @@ public class StudentModel {
 	@Column(unique=true, nullable=false, length= 150, name="email")
 	private String email;	
 	
-    @ManyToOne(targetEntity = ClassesModel.class)
+    @ManyToOne(targetEntity = ClassesModel.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "class_id", referencedColumnName = "id")
     private ClassesModel classes;
     

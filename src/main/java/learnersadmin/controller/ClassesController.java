@@ -84,10 +84,10 @@ public class ClassesController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		if (LoginDao.sessionCheck(request) == 0) {
+		
 			// TODO Auto-generated method stub
 			doGet(request, response);
-		}
+		
 	}
 
 	/**
